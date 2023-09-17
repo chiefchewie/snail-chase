@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 4948b9595ae4a3a41afa577e42ed6dfb
+  - enabled: 1
+    path: Assets/Scenes/BlankAR.unity
+    guid: 6bdce89659816455b9f906fc62d19910
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: fd7fa661e695e624fb2c4084463514b5
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
       type: 2}
