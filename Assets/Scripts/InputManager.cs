@@ -37,7 +37,7 @@ public class InputManager : MonoBehaviour
             Debug.Log("Distance:" + distance + " | Speed: " + speed_mps);
             MainManager.instance.distance = distance;
             MainManager.instance.speed_mps = speed_mps;
-            // SceneManager.LoadScene("BlankAR");
+            SceneManager.LoadScene("BlankAR");
         }
         catch (System.FormatException e)
         {
