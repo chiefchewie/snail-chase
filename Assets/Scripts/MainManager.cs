@@ -5,14 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MainManager : MonoBehaviour
 {
-    public static UserInput instance;
+    public static MainManager instance;
     public double latitude;
     public double longitude;
     public double speed_mps;
         
         private void Awake()
         {
-            if (Instance != null)
+            if (instance != null)
             {
                 Destroy(gameObject);
                 return;
