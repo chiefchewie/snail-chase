@@ -24,5 +24,7 @@ public class ChasePlayer : MonoBehaviour
         dir *= (float)speed;
 
         this.transform.position += speed * Time.fixedDeltaTime * dir;
+
+        this.transform.LookAt(player.transform);
     }
 }
