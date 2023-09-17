@@ -7,8 +7,7 @@ public class MainManager : MonoBehaviour
 {
     public static MainManager instance;
     public double distance;
-    public double latitude;
-    public double longitude;
+    public (double, double) latlong;
     public double speed_mps;
         
         private void Awake()

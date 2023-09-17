@@ -27,16 +27,12 @@ public class InputManager : MonoBehaviour
                 speed_mps = 4;
             }
 
-            /*
-            Random r = new Random();
-            double latitude = r.NextDouble()*distance;
-            double longitude = Math.Sqrt(distance*distance - latitude*latitude);
-            Debug.Log(Math.Sqrt(longitude*longitude + latitude*latitude) == distance);
-            */
+            (double, double) latLong = getLatLong(distance, speed_mps);
 
             Debug.Log("Distance:" + distance + " | Speed: " + speed_mps);
             MainManager.instance.distance = distance;
             MainManager.instance.speed_mps = speed_mps;
+            MainManager.instance.latlong = latLong;
             SceneManager.LoadScene("BlankAR");
         }
         catch (System.FormatException e)
@@ -45,4 +41,20 @@ public class InputManager : MonoBehaviour
             Debug.Log("Invalid input");
         }
     }
+
+    private (double, double) getLatLong(double distance, double speed_mps)
+    {
+        int METERS_TO_DEGREES = 111139;
+        System.Random r = new System.Random();
+
+        double x = r.NextDouble() * distance;
+        double y = System.Math.Sqrt(distance * distance - x * x);
+        Debug.Log(System.Math.Sqrt(y * y + x * x) == distance);
+
+        double latitude = y / METERS_TO_DEGREES;
+        double longitude = x / METERS_TO_DEGREES;
+
+        return (latitude, longitude);
+    }
+
 }
