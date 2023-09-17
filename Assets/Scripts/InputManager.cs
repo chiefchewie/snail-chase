@@ -32,13 +32,13 @@ public class InputManager : MonoBehaviour
             MainManager.instance.latitude = latitude;
             MainManager.instance.longitude = longitude;
             MainManager.instance.speed_mps = speed_mps;
+            // SceneManager.LoadScene("BlankAR");
         }
         catch (System.FormatException e)
         {
             LatField.GetComponent<TMPro.TMP_InputField>().text = "";
             LongField.GetComponent<TMPro.TMP_InputField>().text = "";
             Debug.Log("Invalid input");
-            SceneManager.LoadScene("BlankAR");
         }
     }
 }
