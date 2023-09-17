@@ -11,6 +11,14 @@ public class ChasePlayer : MonoBehaviour
 
     void Start()
     {
+        var latlong = MainManager.Instance.latlong;
+        GetComponent<PlaceAtLocation>().Location = new Location()
+        {
+            Latitude = latlong.Item1,
+            Longitude = latlong.Item2,
+            Altitude = 0,
+            AltitudeMode = AltitudeMode.GroundRelative
+        };
     }
 
     void Update()
