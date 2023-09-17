@@ -23,7 +23,7 @@ public class ChasePlayer : MonoBehaviour
         dir.Normalize();
         dir *= (float)speed;
 
-        this.transform.position += speed * Time.fixedDeltaTime * dir;
+        this.transform.position += ((float) MainManager.Instance.speed_mps) * Time.fixedDeltaTime * dir;
 
         this.transform.LookAt(player.transform);
     }

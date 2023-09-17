@@ -21,7 +21,7 @@ public class InputManager : MonoBehaviour
                 speed_mps = 0.1;
             } else if (speed == "Walk")
             {
-                speed_mps = 0.9;
+                speed_mps = 1;
             } else
             {
                 speed_mps = 4;
@@ -30,9 +30,9 @@ public class InputManager : MonoBehaviour
             (double, double) latLong = getLatLong(distance, speed_mps);
 
             Debug.Log("Distance:" + distance + " | Speed: " + speed_mps);
-            MainManager.instance.distance = distance;
-            MainManager.instance.speed_mps = speed_mps;
-            MainManager.instance.latlong = latLong;
+            MainManager.Instance.distance = distance;
+            MainManager.Instance.speed_mps = speed_mps;
+            MainManager.Instance.latlong = latLong;
             SceneManager.LoadScene("BlankAR");
         }
         catch (System.FormatException e)
