@@ -34,7 +34,7 @@ public class InputManager : MonoBehaviour
             Debug.Log(Math.Sqrt(longitude*longitude + latitude*latitude) == distance);
             */
 
-            Debug.Log("Distance": + distance + " | Speed: " + speed_mps);
+            Debug.Log("Distance:" + distance + " | Speed: " + speed_mps);
             MainManager.instance.distance = distance;
             MainManager.instance.speed_mps = speed_mps;
             // SceneManager.LoadScene("BlankAR");
